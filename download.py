@@ -25,8 +25,6 @@ def download_slides(url: str, start: int = 1, end: int = None) -> str:
 
         res = requests.get(url.format(index=index), stream=True, timeout=5)
 
-        print(res.request.url)
-
         if res.status_code == 404:
             break
 
