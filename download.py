@@ -22,7 +22,7 @@ def download_slides(url: str, start: int = 1, end: int = None) -> str:
     while True:
         if end is not None and index == end + 1:
             break
-
+        
         res = requests.get(url.format(index=index), stream=True, timeout=5)
 
         if res.status_code == 404:
